@@ -1,17 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Home.module.scss';
+import { useState } from 'react';
+import { Heading } from 'components/atoms/Heading/Heading';
+import { Chat } from 'components/molecules/Chat/Chat';
 
 export default function Home() {
+    const [user, setUser] = useState(false);
   return (
     <div className={styles.container}>
-        <h2>chat-app</h2>
-        <div className={styles.chat}>
-            <form className={styles.form}>
-                <input className={styles.formInput} />
-                <button className={styles.formButton} type="submit" >Send</button>
-            </form>
-        </div>
+        <Heading>chat-app</Heading>
+        <Chat />
     </div>
   )
 }
