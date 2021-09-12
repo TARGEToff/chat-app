@@ -1,8 +1,9 @@
 import styles from "./SignIn.module.scss";
+import { Button } from "components/atoms/Button/Button";
 
 const SignIn = () => (
     <div className={styles.SignIn}>
-        <button>Sign In</button>
+        <Button>Sign In</Button>
     </div>
 )
 
