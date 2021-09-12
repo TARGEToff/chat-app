@@ -32,7 +32,16 @@
 
             .formButton {
                 position: relative;
-                left: 60px;
+                left: 40px;
+                margin: 7.5px;
+                width: 70px;
+                padding-top: 4px;
+                height: 35px; 
+                font-size: 1rem;
+                background-color: #3676ee;
+                border: none;
+                color: white;
+                border-radius: 5px;
             }
         }
     }
