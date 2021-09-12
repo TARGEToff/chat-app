@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    .chat {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        width: 500px;
+        border: 1px solid #888;
+        border-radius: 15px;
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            top: 90%;
+            width: 100%;
+            height: 10%;
+            border-top: 1px solid #888;
+
+            .formInput {
+                width: 60%;
+                margin-left: 60px;
+            }
+
+            .formButton {
+                position: relative;
+                left: 60px;
+            }
+        }
+    }
+
+}
