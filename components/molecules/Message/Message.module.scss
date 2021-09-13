@@ -1,0 +1,34 @@
+.message {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.messageSent {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message img {
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+}
+
+.messageReceived p {
+    background-color: #ccc;
+    margin: 5px 5px;
+    width: fit-content;
+    padding: 4px 15px;
+    border-radius: 20px;
+}
+
+.messageSent p {
+    margin: 5px 5px;
+    width: fit-content;
+    padding: 4px 15px;
+    border-radius: 20px;
+    background-color: #3676ee;
+    color: white;
+
+}
