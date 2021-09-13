@@ -16,23 +16,55 @@
         border-radius: 15px;
     }
 
-    .signIn {
-        @extend .wrapper;
-        justify-content: center;
-    }
-
     .header {
+        padding: 0 20px;
         border-bottom: 1px solid #888;
         width: 100%;
         height: 8%;
         position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        display: grid;
         align-items: center;
-        padding-right: 20px;
+        grid-template-columns: 0.4fr 3.6fr 1fr;
+        align-items: center;
     }
 
+    .header img {
+        width: 40px;
+        border-radius: 20px;
+        margin-right: 5px;
+    }
+
+    .messageForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 82%;
+        border-top: 1px solid #888;
+        height: 10%;
+        width: 100%;
+        padding-left: 20px;
+
+        .formInput {
+            height: 30px;
+            width: 300px;
+            margin-right: 50px;
+            border: 1px solid #888;
+            border-radius: 5px; 
+            padding: 7.5px;
+            outline: none;
+        }
+
+        .formInput:hover {
+            border: 1px solid #4b80e3;
+        }
+    
+        .formInput:focus {
+            border: 1px solid #4b80e3;
+            box-shadow: 0px 0px 0px 2.5px rgba(79, 186, 228, 0.5);
+        }
+    }
 }
 
 .home h2 {

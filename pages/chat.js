@@ -1,23 +1,37 @@
-import styles from "../styles/Home.module.scss";
-import Link from "next/link"
-import { signout } from "client.js";
+import styles from "../styles/Chat.module.scss";
+import Link from "next/link";
+import Image from "next/image";
+import { signout, supabase } from "client.js";
 import { Heading } from "components/atoms/Heading/Heading";
+import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { Button } from "components/atoms/Button/Button";
 
 export default function Chat() {
+    const user = supabase.auth.user();
+    console.log(user);
     return (
         <div className={styles.home}>
             <Heading>chat-app</Heading>
             <div className={styles.wrapper}>
                 <div className={styles.header}>
-                    <Link href="/">
-                        <Button onClick={() => signout()}>Sign out</Button>
-                    </Link>
+                    {user && (
+                        <>
+                            <img
+                                src={user.user_metadata.avatar_url}
+                            />
+                            <Paragraph>
+                                {user.user_metadata.full_name}
+                            </Paragraph>
+                        </>
+                    )}
+                    <Button onClick={() => signout()}>
+                        <Link href="/">Sign out</Link>
+                    </Button>
                 </div>
                 <div className={styles.chat}></div>
-                <form className={styles.form}>
+                <form className={styles.messageForm}>
                     <input className={styles.formInput} />
-                    <Button type="submit">Send</Button>
+                    <Button>Send</Button>
                 </form>
             </div>
         </div>

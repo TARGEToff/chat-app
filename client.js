@@ -9,7 +9,7 @@ async function signInWithGoogle() {
     const { user, session, error } = await supabase.auth.signIn({
         provider: "google",
     }, {
-        redirectTo: "https://chat-app-ashy.vercel.app/chat",
+        redirectTo: "http://localhost:3000/chat",
     });
 }
 
