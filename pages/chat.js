@@ -1,15 +1,10 @@
 import styles from "../styles/Home.module.scss";
 import Link from "next/link"
-import { supabase } from "client.js";
+import { signout } from "client.js";
 import { Heading } from "components/atoms/Heading/Heading";
 import { Button } from "components/atoms/Button/Button";
 
 export default function Chat() {
-
-    async function signout() {
-        const { error } = await supabase.auth.signOut();
-    }
-
     return (
         <div className={styles.home}>
             <Heading>chat-app</Heading>
