@@ -1,13 +1,22 @@
 import styles from "./MessageForm.module.scss";
-import { supabase, sendMessage } from "client";
+import { sendMessage } from "client";
+import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { useFormik } from "formik";
 import { Button } from "components/atoms/Button/Button";
+import * as Yup from "yup";
 
 const MessageForm = ({ user }) => {
+    const validationSchema = Yup.object().shape({
+        message: Yup.string()
+            .max(100, "Too many characters")
+            .required("This field is required"),
+    });
+
     const formik = useFormik({
         initialValues: {
             message: "",
         },
+        validationSchema,
         onSubmit: (values) => {
             sendMessage(values.message, user);
             formik.resetForm();
@@ -24,6 +33,7 @@ const MessageForm = ({ user }) => {
                 value={formik.values.message}
                 className={styles.formInput}
             />
+            <Paragraph>{formik.errors.message}</Paragraph>
             <Button type="submit">Send</Button>
         </form>
     );
