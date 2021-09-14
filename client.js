@@ -5,17 +5,9 @@ const supabase = createClient(
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMTQ2OTEyMCwiZXhwIjoxOTQ3MDQ1MTIwfQ.DMCXTp02Iwiomfn_PJOGg7jfDxj7_fDC-gO4FZszo1k"
 );
 
-async function signInWithGoogle() {
+async function signInWith(provider) {
     const { user, session, error } = await supabase.auth.signIn({
-        provider: "google",
-    }, {
-        redirectTo: "http://localhost:3000/chat",
-    });
-}
-
-async function signInWithDiscord() {
-    const { user, session, error } = await supabase.auth.signIn({
-        provider: "discord",
+        provider,
     }, {
         redirectTo: "http://localhost:3000/chat",
     });
@@ -45,7 +37,7 @@ async function sendMessage(message, user) {
         }]) 
 }
 
-export { supabase, signInWithGoogle, signInWithDiscord, signout, getMessages, sendMessage }
+export { supabase, signInWith, signout, getMessages, sendMessage }
 
 
 
