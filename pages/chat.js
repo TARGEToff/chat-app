@@ -25,12 +25,13 @@ export default function Chat() {
                 <Header user={user} />
                 <div className={styles.chat}>
                     {data.map(
-                        ({ id, content, author, authorAvatar }) => (
+                        ({ id, content, authorAvatar, authorId }) => (
                             <Message
                                 key={id}
                                 id={id}
+                                userId={user.id}
                                 content={content}
-                                author={author}
+                                authorId={authorId}
                                 avatar={authorAvatar}
                                 user={user.user_metadata.full_name}
                             />

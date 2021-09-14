@@ -36,9 +36,13 @@ async function sendMessage(message, user) {
     const id = parseInt(getId());
     const { data, error } = await supabase
        .from('messages')
-       .insert([
-           { id, author: user.user_metadata.full_name, authorAvatar: user.user_metadata.avatar_url, content: message }
-       ]) 
+       .insert([{ 
+            id, 
+            author: user.user_metadata.full_name, 
+            authorAvatar: user.user_metadata.avatar_url, 
+            content: message, 
+            authorId: user.id 
+        }]) 
 }
 
 export { supabase, signInWithGoogle, signInWithDiscord, signout, getMessages, sendMessage }
