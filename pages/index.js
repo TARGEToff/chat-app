@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.scss";
-import { signInWithGoogle } from "client.js";
+import { signInWithGoogle, signInWithDiscord } from "client.js";
 import { Heading } from "components/atoms/Heading/Heading";
 import { Button } from "components/atoms/Button/Button";
 
@@ -10,6 +10,9 @@ export default function Home() {
                 <div className={styles.signIn}>
                     <Button onClick={() => signInWithGoogle()}>
                         Sign In with google
+                    </Button>
+                    <Button onClick={() => signInWithDiscord()}>
+                        Sign In with discord
                     </Button>
                 </div>
         </div>

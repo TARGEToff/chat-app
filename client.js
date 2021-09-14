@@ -13,6 +13,14 @@ async function signInWithGoogle() {
     });
 }
 
+async function signInWithDiscord() {
+    const { user, session, error } = await supabase.auth.signIn({
+        provider: "discord",
+    }, {
+        redirectTo: "http://localhost:3000/chat",
+    });
+}
+
 async function signout() {
     const { error } = await supabase.auth.signOut();
 }
@@ -33,7 +41,7 @@ async function sendMessage(message, user) {
        ]) 
 }
 
-export { supabase, signInWithGoogle, signout, getMessages, sendMessage }
+export { supabase, signInWithGoogle, signInWithDiscord, signout, getMessages, sendMessage }
 
 
 
