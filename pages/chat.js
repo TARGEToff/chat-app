@@ -12,14 +12,14 @@ export default function Chat() {
     const user = supabase.auth.user();
     const [data, setData] = useState([])
     useEffect(() => {
-        getMessages()
-        console.log("a");
+        getMessages(setData)
     }, [])
-    async function getMessages() {
-        const { data, error } = await supabase
-        .from("messages")
-        setData(data);
-    }
+    const subscription = supabase
+        .from('messages')
+        .on('*', payload => {
+          getMessages(setData)
+        })
+        .subscribe()
     return (
         <div className={styles.home}>
             <Heading>chat-app</Heading>

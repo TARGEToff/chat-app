@@ -1,5 +1,5 @@
 import styles from "./MessageForm.module.scss";
-import { supabase } from "client";
+import { supabase, sendMessage } from "client";
 import { useFormik } from "formik";
 import { Button } from "components/atoms/Button/Button";
 
@@ -9,20 +9,10 @@ const MessageForm = ({ user }) => {
             message: "",
         },
         onSubmit: (values) => {
-            sendMessage(values.message);
+            sendMessage(values.message, user);
             formik.resetForm();
         },
     });
-
-    async function sendMessage(message) {
-        const getId = () => `${Math.random()}`.toString(36).substr(2, 9);
-        const id = parseInt(getId());
-        const { data, error } = await supabase
-           .from('messages')
-           .insert([
-               { id, author: user.user_metadata.full_name, authorAvatar: user.user_metadata.avatar_url, content: message }
-           ])
-    }
 
     return (
         <form onSubmit={formik.handleSubmit} className={styles.messageForm}>
