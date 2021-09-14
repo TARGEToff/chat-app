@@ -13,6 +13,7 @@ export default function Chat() {
     const [data, setData] = useState([])
     useEffect(() => {
         getMessages()
+        console.log("a");
     }, [])
     async function getMessages() {
         const { data, error } = await supabase
@@ -52,7 +53,7 @@ export default function Chat() {
                         )
                     )}
                 </div>
-                <MessageForm />
+                <MessageForm user={user}/>
             </div>
         </div>
     );
