@@ -1,6 +1,5 @@
 .message {
     display: flex;
-    align-items: center;
     flex-direction: row;
 }
 
@@ -12,13 +11,15 @@
 .message img {
     width: 32px;
     height: 32px;
+    margin-top: 4px;
     border-radius: 20px;
 }
 
 .messageReceived p {
     background-color: #ccc;
-    margin: 5px 5px;
+    margin: 7.5px 5px;
     width: fit-content;
+    max-width: 280px;
     padding: 4px 15px;
     border-radius: 20px;
 }
@@ -26,6 +27,7 @@
 .messageSent p {
     margin: 5px 5px;
     width: fit-content;
+    max-width: 280px;
     padding: 4px 15px;
     border-radius: 20px;
     background-color: #3676ee;
