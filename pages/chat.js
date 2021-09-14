@@ -6,6 +6,7 @@ import { Heading } from "components/atoms/Heading/Heading";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { Button } from "components/atoms/Button/Button";
 import { Message } from "components/molecules/Message/Message";
+import { MessageForm } from "components/molecules/MessageForm/MessageForm";
 
 export default function Chat() {
     const user = supabase.auth.user();
@@ -51,10 +52,7 @@ export default function Chat() {
                         )
                     )}
                 </div>
-                <form className={styles.messageForm}>
-                    <input className={styles.formInput} />
-                    <Button>Send</Button>
-                </form>
+                <MessageForm />
             </div>
         </div>
     );
