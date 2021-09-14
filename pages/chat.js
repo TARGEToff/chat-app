@@ -1,12 +1,10 @@
 import styles from "../styles/Chat.module.scss";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { signout, supabase, getMessages } from "client.js";
+import { supabase, getMessages } from "client.js";
 import { Heading } from "components/atoms/Heading/Heading";
-import { Paragraph } from "components/atoms/Paragraph/Paragraph";
-import { Button } from "components/atoms/Button/Button";
 import { Message } from "components/molecules/Message/Message";
 import { MessageForm } from "components/molecules/MessageForm/MessageForm";
+import { Header } from "components/molecules/Header/Header";
 
 export default function Chat() {
     const user = supabase.auth.user();
@@ -24,21 +22,7 @@ export default function Chat() {
         <div className={styles.home}>
             <Heading>chat-app</Heading>
             <div className={styles.wrapper}>
-                <div className={styles.header}>
-                    {user && (
-                        <>
-                            <img
-                                src={user.user_metadata.avatar_url}
-                            />
-                            <Paragraph>
-                                {user.user_metadata.full_name}
-                            </Paragraph>
-                        </>
-                    )}
-                    <Button onClick={() => signout()}>
-                        <Link href="/">Sign out</Link>
-                    </Button>
-                </div>
+                <Header user={user} />
                 <div className={styles.chat}>
                     {data.map(
                         ({ id, content, author, authorAvatar }) => (
