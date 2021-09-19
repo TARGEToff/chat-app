@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { supabase } from "client.js";
 import styles from "styles/Channel.module.scss";
-import { Heading } from 'components/atoms/Heading/Heading';
 import { Header } from 'components/molecules/Header/Header';
 import { Chat } from 'components/molecules/Chat/Chat';
+import { ChannelsList } from 'components/molecules/ChannelsList/ChannelsList';
 import { MessageForm } from 'components/molecules/MessageForm/MessageForm';
 
 export default function Channel() {
@@ -13,8 +13,8 @@ export default function Channel() {
 
     return (
         <div className={styles.channel}>
-            <Heading isBig>chat-app</Heading>
-            <div className={styles.wrapper}>
+            <ChannelsList />
+            <div className={styles.chatPanel}>
                 <Header user={user} channel={channel} />
                 <Chat channel={channel} />
                 <MessageForm user={user} channel={channel} />

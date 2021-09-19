@@ -1,0 +1,26 @@
+.ChannelsList {
+    width: 400px;
+    height: 26vh;
+    margin-top: 10vh;
+    background-color: #171429;
+    border-radius: 20px;
+    margin-right: 100px;
+    padding: 20px;
+
+    .channel {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.ChannelsList p {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    height: 20%;
+}
+
+.ChannelsList a {
+    color: white;
+    display: block;
+    margin: 10px 0;
+}

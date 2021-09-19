@@ -1,4 +1,5 @@
-import styles from "./Chat.module.scss";import { useState, useEffect } from "react";
+import styles from "./Chat.module.scss";
+import { useState, useEffect } from "react";
 import { Message } from "components/molecules/Message/Message";
 import { supabase, getMessages } from "client.js";
 
