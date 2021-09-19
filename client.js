@@ -17,17 +17,17 @@ async function signout() {
     const { error } = await supabase.auth.signOut();
 }
 
-async function getMessages(setData) {
+async function getMessages(setData, channel) {
     const { data, error } = await supabase
-    .from("messages")
+        .from(channel)
     setData(data);
 }
 
-async function sendMessage(message, user) {
+async function sendMessage(message, user, channel) {
     const getId = () => `${Math.random()}`.toString(36).substr(2, 9);
     const id = parseInt(getId());
     const { data, error } = await supabase
-       .from('messages')
+       .from(channel)
        .insert([{ 
             id, 
             author: user.user_metadata.full_name, 
