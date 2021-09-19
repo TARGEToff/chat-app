@@ -6,7 +6,7 @@ import { Button } from "components/atoms/Button/Button";
 export default function Home() {
     return (
         <div className={styles.home}>
-            <Heading>chat-app</Heading>
+            <Heading isBig>chat-app</Heading>
                 <div className={styles.signIn}>
                     <Button onClick={() => signInWith("google")}>
                         Sign In with google

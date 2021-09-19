@@ -20,7 +20,7 @@ export default function Chat() {
         .subscribe()
     return (
         <div className={styles.home}>
-            <Heading>chat-app</Heading>
+            <Heading isBig>chat-app</Heading>
             <div className={styles.wrapper}>
                 <Header user={user} />
                 <div className={styles.chat}>

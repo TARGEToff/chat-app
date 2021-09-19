@@ -11,8 +11,8 @@
         grid-template-rows: 0.7fr 9fr 1fr;
         height: 80vh;
         width: 500px;
-        border: 1px solid #888;
-        border-radius: 15px;
+        background-color: #171429;
+        border-radius: 20px;
 
         .chat {
             padding: 20px;
@@ -24,12 +24,14 @@
         }
 
         .chat::-webkit-scrollbar-thumb {
-            background-color: #3676ee;
+            background-color: #2a56a7;
+            border-radius: 20px;
         }
 
     }
 }
 
-.home h2 {
+.home h1 {
     margin-top: 15px;
+    color: white;
 }
