@@ -1,6 +1,6 @@
 .ChannelsList {
     width: 400px;
-    height: 26vh;
+    height: 31vh;
     margin-top: 10vh;
     background-color: #171429;
     border-radius: 20px;
@@ -14,13 +14,23 @@
 }
 
 .ChannelsList p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #555;
-    height: 20%;
+    height: 15%;
 }
 
 .ChannelsList a {
     color: white;
     display: block;
-    margin: 10px 0;
+    width: fit-content;
+    padding: 7.5px 10px;
+    border-radius: 15px;
+    margin: 3px 0;
+    position: relative;
+    right: 5px;
+}
+
+.ChannelsList a:focus {
+    background-color: white;
+    color: black;
 }
