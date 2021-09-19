@@ -1,18 +1,22 @@
 import styles from "./Header.module.scss"
+import Image from "next/image";
 import Link from "next/link";
 import { signout } from "client";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { Button } from "components/atoms/Button/Button";
+import Message from "public/message.svg";
 
-const Header = ({ user }) => (
+const Header = ({ user, channel }) => (
 <div className={styles.header}>
     {user && (
         <>
-            <img
-                src={user.user_metadata.avatar_url}
+            <Image
+                src={Message}
+                height={24}
+                width={24}
             />
             <Paragraph>
-                {user.user_metadata.full_name}
+                {channel}
             </Paragraph>
         </>
     )}

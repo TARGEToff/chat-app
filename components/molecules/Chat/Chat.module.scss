@@ -1,0 +1,13 @@
+.chat {
+    padding: 20px;
+    overflow-y: scroll
+}
+
+.chat::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background-color: #2a56a7;
+    border-radius: 20px;
+}
