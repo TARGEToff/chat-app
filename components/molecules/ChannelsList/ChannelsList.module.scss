@@ -1,6 +1,7 @@
 .ChannelsList {
     width: 400px;
-    height: 31vh;
+    min-width: 200px;
+    height: 260px;
     margin-top: 10vh;
     background-color: #171429;
     border-radius: 20px;
@@ -17,6 +18,7 @@
     margin-bottom: 10px;
     border-bottom: 1px solid #555;
     height: 15%;
+    color: white;
 }
 
 .ChannelsList a {

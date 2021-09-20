@@ -1,3 +1,5 @@
+@import "styles/Home.module.scss";
+
 .message {
     display: flex;
     flex-direction: row;
@@ -31,7 +33,6 @@
     max-width: 280px;
     padding: 4px 15px;
     border-radius: 20px;
-    background-color: #2a56a7;
-    color: white;
+    background-color: $primary;
 
 }

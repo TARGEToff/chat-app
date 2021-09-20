@@ -1,17 +1,18 @@
+@import "styles/Home.module.scss";
+
 .button {
     margin: 7.5px;
-    width: fit-content;
-    padding: 4px 8px;
+    width: 70px;
+    padding: 4px 4px;
     height: 30px; 
     font-size: 1rem;
-    background-color: #2a56a7;
+    background-color: $primary;
     border: none;
-    color: white;
     border-radius: 5px;
 }
 
 .button:hover {
-    background-color: #2d63c7;
+    background-color: $primary;
 }
 
 .button:active {
