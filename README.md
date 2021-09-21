@@ -1,10 +1,10 @@
-<h4 align="center">Chat-app - chat a bit</h4>
+<h3 align="center">Chat-app</h3>
 
 ## Project Overview
 
-App allows to log in with your existing google, discord or twitch accounts and communicate through chat.
+App allows to log in with your existing google, discord or twitch accounts and communicate through chat with 5 channels.
 
-## Tech used
+## Tech used 
 
 | Tech                                                                                   | Description                                                         |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
