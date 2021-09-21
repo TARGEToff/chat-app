@@ -1,18 +1,18 @@
 import styles from "./ChannelsList.module.scss"
-import Link from "next/link";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph"
+import { ChannelLink as Link } from "components/atoms/Link/Link";
 
 
 const ChannelsList = () => {
 
     return (
         <div className={styles.ChannelsList}>
-            <Paragraph isBig>Channels list</Paragraph>
-            <Link href="/chat/general">General</Link>
-            <Link href="/chat/first">First</Link>
-            <Link href="/chat/second">Second</Link>
-            <Link href="/chat/third">Third</Link>
-            <Link href="/chat/fourth">Fourth</Link>
+            <Paragraph isBig>Channels</Paragraph>
+            <Link linkChannel={"general"}>General</Link>
+            <Link linkChannel={"first"}>First</Link>
+            <Link linkChannel={"second"}>Second</Link>
+            <Link linkChannel={"third"}>Third</Link>
+            <Link linkChannel={"fourth"}>Fourth</Link>
         </div>
     )
 }

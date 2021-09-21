@@ -1,0 +1,17 @@
+.link {
+    color: white;
+    display: block;
+    width: fit-content;
+    padding: 7.5px 10px;
+    border-radius: 15px;
+    margin: 3px 0;
+    position: relative;
+    right: 5px;
+
+}
+
+.active {
+    @extend .link;
+    background-color: white;
+    color: black;
+}

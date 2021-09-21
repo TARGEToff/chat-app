@@ -1,38 +1,47 @@
 .ChannelsList {
-    width: 400px;
-    min-width: 200px;
-    height: 260px;
-    margin-top: 10vh;
+    width: 140px;
+    height: 80vh;
     background-color: #171429;
-    border-radius: 20px;
-    margin-right: 100px;
+    border-radius: 20px 0 0 20px;
     padding: 20px;
+    position: relative;
+    border-right: 1px solid #555;
+    margin-top: 10vh;
 
-    .channel {
-        display: flex;
-        flex-direction: row;
-    }
+
 }
 
 .ChannelsList p {
     margin-bottom: 10px;
     border-bottom: 1px solid #555;
-    height: 15%;
+    height: 40px;
     color: white;
 }
 
-.ChannelsList a {
-    color: white;
-    display: block;
-    width: fit-content;
-    padding: 7.5px 10px;
-    border-radius: 15px;
-    margin: 3px 0;
-    position: relative;
-    right: 5px;
+@media (min-width: 0px) and (max-width: 610px) { 
+    .ChannelsList {
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
 }
 
-.ChannelsList a:focus {
-    background-color: white;
-    color: black;
+@media (min-width: 0px) and (max-width: 510px) { 
+    .ChannelsList {
+        padding: 20px 0 20px 10px;
+        width: 100px;
+    }
+
+    .ChannelsList p {
+        width: fit-content;
+    }
 }
+
+@media (min-width: 0px) and (max-width: 405px) { 
+    .ChannelsList {
+        padding-right: 5px;
+    }
+}
+
+
+

@@ -8,12 +8,13 @@ $secondary: #171429;
     height: 100vh;
     width: 100vw;
     .wrapper {
-        margin-top: 40px;
+        margin-top: 30vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 78vh;
-        width: 800px;
+        justify-content: center;
+        height: 30vh;
+        width: 300px;
         background-color: #171429;
         border-radius: 20px;
     }
@@ -21,6 +22,10 @@ $secondary: #171429;
     .signIn {
         @extend .wrapper;
         justify-content: center;
+
+        button {
+            width: 150px;
+        }
     }
 
     .header {
