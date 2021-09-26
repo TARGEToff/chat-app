@@ -9,7 +9,7 @@ async function signInWith(provider) {
     const { user, session, error } = await supabase.auth.signIn({
         provider,
     }, {
-        redirectTo: "https://chat-app-ashy.vercel.ap/chat/general",
+        redirectTo: "https://chat-app-ashy.vercel.app/chat/general",
     });
 }
 
