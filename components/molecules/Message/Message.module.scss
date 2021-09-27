@@ -3,11 +3,13 @@
 .message {
     display: flex;
     flex-direction: row;
+    overflow-wrap: anywhere;
 }
 
 .messageSent {
     display: flex;
     flex-direction: row-reverse;
+    overflow-wrap: anywhere;
 }
 
 .message img {
