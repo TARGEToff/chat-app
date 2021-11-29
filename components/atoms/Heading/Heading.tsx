@@ -1,7 +1,11 @@
-import react from "react";
 import styles from "./Heading.module.scss";
 
-const Heading = ({ isBig = false, children }) => (
+interface Props {
+    children: React.ReactNode;
+    isBig?: boolean;
+}
+
+const Heading = ({ isBig = false, children }: Props) => (
     <>
         {isBig ? (
             <h1 className={styles.big}>{children}</h1>
@@ -9,6 +13,6 @@ const Heading = ({ isBig = false, children }) => (
             <h2 className={styles.normal}>{children}</h2>
         )}
     </>
-)
+);
 
 export { Heading };

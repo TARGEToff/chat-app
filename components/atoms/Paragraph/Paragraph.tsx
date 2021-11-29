@@ -1,7 +1,12 @@
 import react from "react";
 import styles from "./Paragraph.module.scss";
 
-const Paragraph = ({ isBig = false, children }) => (
+interface Props {
+    children: React.ReactNode;
+    isBig?: boolean
+}
+
+const Paragraph = ({ isBig = false, children }: Props) => (
     <>
         {isBig ? (
             <p className={styles.big}>{children}</p>

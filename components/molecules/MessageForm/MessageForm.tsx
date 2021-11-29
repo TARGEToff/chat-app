@@ -5,7 +5,12 @@ import { useFormik } from "formik";
 import { Button } from "components/atoms/Button/Button";
 import * as Yup from "yup";
 
-const MessageForm = ({ user, channel }) => {
+interface Props {
+    user: User;
+    channel: Channel;
+}
+
+const MessageForm = ({ user, channel }: Props) => {
     const validationSchema = Yup.object().shape({
         message: Yup.string()
             .max(100, "Too many characters")
@@ -17,7 +22,7 @@ const MessageForm = ({ user, channel }) => {
             message: "",
         },
         validationSchema,
-        onSubmit: (values) => {
+        onSubmit: values => {
             sendMessage(values.message, user, channel);
             formik.resetForm();
         },
@@ -34,7 +39,7 @@ const MessageForm = ({ user, channel }) => {
                 className={styles.formInput}
             />
             <Paragraph>{formik.errors.message}</Paragraph>
-            <Button type="submit">Send</Button>
+            <Button>Send</Button>
         </form>
     );
 };

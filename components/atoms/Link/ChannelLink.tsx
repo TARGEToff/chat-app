@@ -1,14 +1,19 @@
-import styles from "./Link.module.scss";
+import styles from "./ChannelLink.module.scss";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import clsx from "clsx";
 
-const ChannelLink = ({ linkChannel, children }) => {
+interface Props {
+    children: React.ReactNode;
+    linkChannel: string;
+}
+
+const ChannelLink = ({ linkChannel, children }: Props) => {
     const router = useRouter();
     const { channel } = router.query;
 
     return (
-        <Link href={`/chat/${linkChannel}`}>
+        <Link href={`/channel/${linkChannel}`}>
             <a
                 className={clsx({
                     [styles.active]: linkChannel === channel,
